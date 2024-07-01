@@ -1,0 +1,10 @@
+services:
+    web:
+        build:
+            context: ./docker
+        volumes:
+            - ./:/var/task
+        environment:
+            HANDLER: public/index-sls.php
+            DOCUMENT_ROOT: public
+        restart: always
